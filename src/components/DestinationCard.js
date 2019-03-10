@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -14,7 +15,7 @@ export default class DestinationCard extends Component {
 
 
     return (
-      <Card className={classes.card}>
+    <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -40,7 +41,6 @@ export default class DestinationCard extends Component {
           </div>
         </CardContent>
       </CardActionArea>
-
     </Card>
     )
   }
