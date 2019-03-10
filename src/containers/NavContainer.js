@@ -9,7 +9,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import Grid from "@material-ui/core/Grid";
 import Explore from "@material-ui/icons/Explore";
 import Button from "@material-ui/core/Button";
-import './themes/headerStyling.js';
+import Filter from "./components/Filter.js";
+import theme from './themes/headerStyling.js';
 
 class NavContainer extends Component {
   render() {
@@ -50,11 +51,13 @@ class NavContainer extends Component {
             </Grid>
           </Toolbar>
         </AppBar>
+        <Filter />
       </div>
+
     );
   }
 }
-Header.propTypes = {
+NavContainer.propTypes = {
   classes: PropTypes.object.isRequired
 };
 s
