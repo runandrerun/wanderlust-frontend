@@ -11,9 +11,10 @@ import Explore from "@material-ui/icons/Explore";
 import Button from "@material-ui/core/Button";
 import { styles } from "../themes/filterStyling.js";
 
-export default class Filter extends Component {
+class Filter extends Component {
   render() {
-    const { classes, styles } = this.props;
+    const { classes } = styles;
+    console.log(this.props);
     return (
       <div className={classes.root}>
         <AppBar position="fixed" className={classes.header}>
@@ -38,3 +39,5 @@ export default class Filter extends Component {
     );
   }
 };
+
+export default withStyles(styles, { withTheme: true })(Filter);
