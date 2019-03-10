@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import NavContainer from './containers/NavContainer.js';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import DestinationsContainer from './containers/DestinationsContainer.js';
 import './App.css';
-import './themes/materialStyling.js';
+import { theme } from './themes/materialStyling.js';
 
 class App extends Component {
   render() {
@@ -11,8 +12,7 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider theme={theme}>
         <NavContainer />
-        // <SubtitleSection />
-        // <LocationsGrid locations={this.state.locations} />
+        <DestinationsContainer locations={this.state.destinations} />
         </MuiThemeProvider>
       </div>
     );
