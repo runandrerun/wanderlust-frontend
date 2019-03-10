@@ -9,9 +9,9 @@ import SearchIcon from "@material-ui/icons/Search";
 import Grid from "@material-ui/core/Grid";
 import Explore from "@material-ui/icons/Explore";
 import Button from "@material-ui/core/Button";
-import "./themes/filterStyling.js";
+import { styles } from "../themes/filterStyling.js";
 
-class FilterBar extends Component {
+export default class FilterBar extends Component {
   render() {
     const { classes } = this.props;
     return (

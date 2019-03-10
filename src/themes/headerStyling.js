@@ -42,7 +42,7 @@ export const styles = theme => ({
     borderStyle: "solid",
     borderColor: "rgb(235, 235, 235)",
     borderRadius: "4px",
-    marginRight: theme.spacing.unit * 2, 
+    marginRight: theme.spacing.unit * 2,
     marginLeft: 0,
     width: "100%",
     [theme.breakpoints.up("sm")]: {
