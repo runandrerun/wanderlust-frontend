@@ -5,18 +5,27 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import DestinationsContainer from './containers/DestinationsContainer.js';
 import './App.css';
 import { theme } from './themes/materialStyling.js';
+import { initSetDestinations } from './actions';
+import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <MuiThemeProvider theme={theme}>
-        <NavContainer />
-        <DestinationsContainer locations={this.state.destinations} />
+        <NavContainer destinations={this.props.destinations} />
+        {/*<DestinationsContainer locations={this.state.destinations} />*/}
         </MuiThemeProvider>
       </div>
     );
-  }
-}
+  };
+};
 
-export default App;
+const mapStateToProps = (state) => {
+  console.log('Hey', state)
+  return {
+    destinations: state.destinationsState.destinations,
+  }
+};
+
+export default connect(mapStateToProps, { initSetDestinations })(App);

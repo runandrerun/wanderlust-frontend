@@ -11,9 +11,9 @@ import Explore from "@material-ui/icons/Explore";
 import Button from "@material-ui/core/Button";
 import { styles } from "../themes/filterStyling.js";
 
-export default class FilterBar extends Component {
+export default class Filter extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, styles } = this.props;
     return (
       <div className={classes.root}>
         <AppBar position="fixed" className={classes.header}>

@@ -1,6 +1,7 @@
 export const fetchDestinations = () => {
-  const data = "../dataset/destinationsCSV.json";
+  const data = require('../dataset/destinationsCSV.json')
+  // const data = "../dataset/destinationsCSV.json";
   fetch(data)
     .then(res => res.json())
-    .then(data);
+    .then(console.log);
 };

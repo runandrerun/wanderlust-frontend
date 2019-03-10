@@ -1,9 +1,10 @@
 import { fetchDestinations } from '../adapters/destinationsAdapter';
 
-export const setDestionations = () => {
+export const initSetDestinations = () => {
   return (dispatch) => {
     fetchDestinations()
       .then(destinations => {
+        console.log(destinations)
         dispatch(setDestinations(destinations))
       });
   };
