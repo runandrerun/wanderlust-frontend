@@ -2,24 +2,26 @@ import React, { Component } from "react";
 import LocationCard from "../components/DestinationCard.js";
 import Grid from "@material-ui/core/Grid";
 import { styles } from "../themes/destinationsContainerStyling.js";
+import { withStyles } from "@material-ui/core/styles";
 
-export default class DestinationsContainer extends Component {
+class DestinationsContainer extends Component {
   render() {
-    const { destinations, classes } = this.props;
+    const { classes } = styles;
+    console.log('Destinations', this.props)
     return (
-      <div className={classes.root}>
+      <div className={this.props.classes.root}>
         <Grid
           Container
           justify="flex-start"
           spacing={16}
         >
-          {destinations.map((
+          {this.props.destinations.map((
             destination,
             index
           ) => (
             <Grid key={index} item>
               {" "}
-              <LocationCard location={destination} />
+              <LocationCard destination={this.props.destination} />
             </Grid>
           ))}
         </Grid>
@@ -27,3 +29,5 @@ export default class DestinationsContainer extends Component {
     );
   }
 }
+
+export default withStyles(styles, { withTheme: true })(DestinationsContainer);

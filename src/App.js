@@ -14,7 +14,8 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider theme={theme}>
         <NavContainer destinations={this.props.destinations} />
-        {/*<DestinationsContainer locations={this.state.destinations} />*/}
+
+        <DestinationsContainer destinations={this.props.destinations} />
         </MuiThemeProvider>
       </div>
     );

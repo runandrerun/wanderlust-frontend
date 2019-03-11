@@ -14,22 +14,22 @@ import { styles } from "../themes/filterStyling.js";
 class Filter extends Component {
   render() {
     const { classes } = styles;
-    console.log(this.props);
+    console.log('Inside Filter', this.props);
     return (
-      <div className={classes.root}>
-        <AppBar position="fixed" className={classes.header}>
-          <Toolbar className={classes.toolbar}>
+      <div className={this.props.classes.root}>
+        <AppBar position="fixed" className={this.props.classes.header}>
+          <Toolbar className={this.props.classes.toolbar}>
             <Grid container spacing={24}>
-              <Grid item className={classes.grid}>
+              <Grid item className={this.props.classes.grid}>
                 <Button
-                  className={classes.buttons}
+                  className={this.props.classes.buttons}
                   variant="outlined"
                   color="primary"
                 >
                   Year
                 </Button>
               </Grid>
-              <Grid item className={classes.grid}>
+              <Grid item className={this.props.classes.grid}>
                 <div />
               </Grid>
             </Grid>
