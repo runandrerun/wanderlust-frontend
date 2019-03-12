@@ -25,11 +25,11 @@ class DestinationCard extends Component {
         <CardContent className={this.props.classes.cardContentArea}>
 
           <Typography noWrap className={this.props.classes.yearArea} component="p">
-           Featured in: <span className={this.props.classes.year}>{this.props.destination.year}</span>  · <a href={this.props.destination.article_link} className={this.props.classes.articleLink} target="_blank">Original Article <Launch className={this.props.classes.launchicon} /></a>
+           Featured in: <span className={this.props.classes.year}>{this.props.destination.Year}</span>  · <a href={this.props.destination['Article Link']} className={this.props.classes.articleLink} target="_blank">Original Article <Launch className={this.props.classes.launchicon} /></a>
           </Typography>
 
           <Typography variant="h6" component="h2">
-            {this.props.destination.destination_name}
+            {this.props.destination.Location}
           </Typography>
           <div className={this.props.classes.snippet_area}>
           <Typography className={this.props.classes.snippet_text} noWrap component="p">
