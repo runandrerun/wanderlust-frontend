@@ -9,7 +9,7 @@ class DestinationsContainer extends Component {
     const { classes } = styles;
     console.log('Destinations', this.props)
     return (
-      <div>
+      <div style={{'margin-top':200}}>
         <Grid
           className={this.props.classes.root}
           container
