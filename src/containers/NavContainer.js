@@ -51,7 +51,6 @@ class NavContainer extends Component {
             </Grid>
           </Toolbar>
         </AppBar>
-        <Filter />
       </div>
 
     );
@@ -61,4 +60,4 @@ NavContainer.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(NavContainer);
+export default withStyles(styles, { withTheme: true })(NavContainer);

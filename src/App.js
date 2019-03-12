@@ -2,20 +2,28 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import NavContainer from './containers/NavContainer.js';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import Filter from './components/Filter.js';
 import DestinationsContainer from './containers/DestinationsContainer.js';
 import './App.css';
 import { theme } from './themes/materialStyling.js';
 import { initSetDestinations } from './actions';
 import { connect } from 'react-redux';
+import jsonData from './dataset/destinationsCSV.json';
 
 class App extends Component {
+
+  componentDidMount() {
+    initSetDestinations();
+  };
+
   render() {
+    const parseData = JSON.parse(JSON.stringify(jsonData));
     return (
       <div className="App">
         <MuiThemeProvider theme={theme}>
-        <NavContainer destinations={this.props.destinations} />
-
-        <DestinationsContainer destinations={this.props.destinations} />
+        <NavContainer />
+        <Filter />
+        <DestinationsContainer destinations={parseData} />
         </MuiThemeProvider>
       </div>
     );

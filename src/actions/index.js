@@ -2,16 +2,16 @@ import { fetchDestinations } from '../adapters/destinationsAdapter';
 
 export const initSetDestinations = () => {
   return (dispatch) => {
-    fetchDestinations()
+    return fetchDestinations()
       .then(destinations => {
         console.log(destinations)
-        dispatch(setDestinations(destinations))
+        return dispatch(setDestinations(destinations))
       });
   };
 };
 
 
-const setDestinations = (destinations) => {
+export const setDestinations = (destinations) => {
   return {
     type: 'SET_DESTINATIONS',
     payload: {

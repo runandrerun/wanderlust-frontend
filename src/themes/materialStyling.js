@@ -6,7 +6,7 @@ export const theme = createMuiTheme({
     fontSize:14,
     textTransform: "none",
     color: "#484848",
-    useNextVarients: true,
+    useNextVariants: true,
   },
   palette: {
     primary: {
