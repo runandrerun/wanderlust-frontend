@@ -13,7 +13,7 @@ import { styles } from '../themes/destinationCardStyling.js';
 class DestinationCard extends Component {
   render() {
     const { classes } = styles;
-
+    // console.log("Card", this.props)
     return (
     <Card className={this.props.classes.card}>
       <CardActionArea>

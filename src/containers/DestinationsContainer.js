@@ -21,7 +21,7 @@ class DestinationsContainer extends Component {
           ) => (
             <Grid key={index} item>
               {" "}
-              <LocationCard destination={this.props.destination} />
+              <LocationCard destination={destination} />
             </Grid>
           ))}
         </Grid>

@@ -8,12 +8,12 @@ import './App.css';
 import { theme } from './themes/materialStyling.js';
 import { initSetDestinations } from './actions';
 import { connect } from 'react-redux';
-import jsonData from './dataset/destinationsCSV.json';
+import jsonData from './dataset/smallCSV.json';
 
 class App extends Component {
 
   componentDidMount() {
-    initSetDestinations();
+    // initSetDestinations();
   };
 
   render() {
