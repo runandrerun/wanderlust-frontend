@@ -9,9 +9,10 @@ class DestinationsContainer extends Component {
     const { classes } = styles;
     console.log('Destinations', this.props)
     return (
-      <div className={this.props.classes.root}>
+      <div>
         <Grid
-          Container
+          className={this.props.classes.root}
+          container
           justify="flex-start"
           spacing={16}
         >
