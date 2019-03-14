@@ -2,27 +2,49 @@ import React from "react";
 import { render } from "react-dom";
 import { FixedSizeList as List } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
+import { styles } from "../themes/destinationsContainerStyling.js";
+import { withStyles } from "@material-ui/core/styles";
+import "../themes/centerContainer.css";
+import Grid from "@material-ui/core/Grid";
+import LocationCard from "../components/DestinationCard.js";
 
 const Row = ({ index, style }) => (
-  <div className={index % 2 ? "ListItemOdd" : "ListItemEven"} style={style}>
-    Row {index}
-  </div>
+  console.log(this.props)
+  const dictionary = this.props.destinations;
+  return this.props.destinations.map((
+    destination,
+    index,
+  ) => {
+    <div className={index % 2 ? "ListItemOdd" : "ListItemEven"} style={style}>
+      {" "}
+      <LocationCard destination={dictionary[i]} />
+    </div>
+  })
+
+  // return this.props.destinations.map((destination, index) => {
+  //
+  // })
+
 );
 
-const DestinationsWindow = () => (
-  <AutoSizer>
-    {({ height, width }) => (
-      <List
-        className="List"
-        height={height}
-        itemCount={1000}
-        itemSize={35}
-        width={width}
-      >
-        {Row}
-      </List>
-    )}
-  </AutoSizer>
-);
+class DestinationsWindow extends React.Component {
+  render() {
+    const listLength = this.props.destinations.length;
+    return (
+    <AutoSizer>
+      {({ height, width }) => (
+        <List
+          className="List"
+          height={height}
+          itemCount={listLength}
+          itemSize={35}
+          width={width}
+        >
+          {Row}
+        </List>
+      )}
+    </AutoSizer>
+  )};
+};
 
-render(<DestinationsWindow />, document.getElementById("root"));
+export default withStyles(styles)(DestinationsWindow);
