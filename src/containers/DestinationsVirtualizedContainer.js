@@ -22,7 +22,7 @@ class Row extends PureComponent {
 
     for (let i = fromIndex; i < toIndex; i++) {
       items.push(
-        <destinationCard key={i} destination={destinations[i]} />
+        <DestinationCard key={i} destination={destinations[i]} />
       );
     }
 
@@ -45,7 +45,7 @@ class DestinationsGrid extends PureComponent {
     const { destinations, classes } = this.props;
 
     return (
-      <div style={{ marginTop: "10px", height: "80vh" }}>
+      <div style={{ marginTop: "180px", height: "80vh" }}>
         <AutoSizer>
           {({ height, width }) => {
             const itemsPerRow = Math.floor(width / CARD_SIZE) || 1;

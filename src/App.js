@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import NavContainer from './containers/NavContainer.js';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import Filter from './components/Filter.js';
-import DestinationsWindow from './containers/DestinationsWindow.js';
+import DestinationsVirtualizedContainer from './containers/DestinationsVirtualizedContainer.js';
+// import DestinationsWindow from './containers/DestinationsWindow.js';
 // import DestinationsContainer from './containers/DestinationsContainer.js';
 import './App.css';
 import { theme } from './themes/materialStyling.js';
@@ -24,7 +25,8 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
         <NavContainer />
         <Filter />
-        <DestinationsWindow destinations={parseData} />
+        {/*<DestinationsWindow destinations={parseData} /> */}
+        <DestinationsVirtualizedContainer destinations={parseData} />
         {/* <DestinationsContainer destinations={parseData} /> */}
         </MuiThemeProvider>
       </div>
