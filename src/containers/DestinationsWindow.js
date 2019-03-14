@@ -11,23 +11,27 @@ import LocationCard from "../components/DestinationCard.js";
 class Row extends Component {
   render() {
     console.log(this.props)
+    const allDestinations = [];
+    const { data, index, style } = this.props;
     const dictionary = this.props.destinations;
     const creation = () => {
       this.props.destinations.map((
       destination,
       index,
     ) => {
-      <div className={index % 2 ? "ListItemOdd" : "ListItemEven"} style={style}>
-        {" "}
-        <LocationCard destination={dictionary[i]} />
-      </div>
+      allDestinations.push(<LocationCard destination={dictionary[index]} />)
       });
     };
     return (
-      creation()
+      <div className={this.props.classes.Row} style={style}>
+        {allDestinations}
+      </div>
     )
   }
-}
+};
+
+// <div className={index % 2 ? "ListItemOdd" : "ListItemEven"} style={style}>
+  // {" "}
 
 class DestinationsWindow extends Component {
   render() {
