@@ -32,5 +32,10 @@ export const styles = theme => ({
   articleLink:{
     textDecoration:"none",
     color:"#A61D55",
-  }
+  },
+  carouselStyle:{
+   height:190,
+   objectFit: 'cover',
+   borderRadius: 5,
+ },
 });

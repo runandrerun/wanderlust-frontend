@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Launch from "@material-ui/icons/Launch";
 import { withStyles } from '@material-ui/core/styles';
 import { styles } from '../themes/destinationCardStyling.js';
+import DestinationCarousel from './DestinationCarousel.js';
 
 class DestinationCard extends Component {
   render() {
@@ -17,11 +18,14 @@ class DestinationCard extends Component {
     return (
     <Card className={this.props.classes.card}>
       <CardActionArea>
-        <CardMedia
+      <div className={this.props.classes.carouselStyle}>
+        <DestinationCarousel destination={this.props.destination} />
+      </div>
+        {/*<CardMedia
           component="img"
           className={this.props.classes.media}
           image={this.props.destination.image1}
-        />
+        />*/}
         <CardContent className={this.props.classes.cardContentArea}>
 
           <Typography noWrap className={this.props.classes.yearArea} component="p">
