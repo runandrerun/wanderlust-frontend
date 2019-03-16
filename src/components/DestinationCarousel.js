@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CardMedia from "@material-ui/core/CardMedia";
 import Slider from "react-slick";
 import { NextArrow, PrevArrow, styles} from "../themes/carouselStyling.js";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { withStyles } from "@material-ui/core/styles";
 
 
@@ -17,9 +19,10 @@ class DestinationCarousel extends Component {
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
     };
-    console.log("Inside Carousel", settings)
+    console.log("Inside Carousel", this.props)
     return (
       <div>
+      {console.log(settings)}
         <Slider {...settings}>
           <div>
             <CardMedia
