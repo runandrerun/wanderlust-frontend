@@ -4,7 +4,7 @@ export const styles = theme => ({
     boxShadow: "none"
   },
   media: {
-    height:220,
+    height:180,
     objectFit: 'cover',
         borderRadius: 5
   },
@@ -23,7 +23,7 @@ export const styles = theme => ({
     fontWeight: 600,
     fontSize:12,
     lineHeight:"16px",
-    paddingTop:4,
+    paddingTop:8,
 
   },
   launchicon: {
@@ -34,7 +34,7 @@ export const styles = theme => ({
     color:"#A61D55",
   },
   carouselStyle:{
-   height:190,
+   height:210,
    objectFit: 'cover',
    borderRadius: 5,
  },
