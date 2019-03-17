@@ -12,14 +12,15 @@ export const styles = theme => ({
     padding:"4px 0px"
   },
   year:{
-    backgroundColor:"#A61D55",
+    backgroundColor:"#FA7268",
     borderRadius:"3.2px",
     color:"white",
     padding:"0 4px"
   },
   yearArea:{
     textTransform:"uppercase",
-    color:"#A61D55",
+    // color:"#A61D55",
+    color: "#FA7268",
     fontWeight: 600,
     fontSize:12,
     lineHeight:"16px",
@@ -31,7 +32,8 @@ export const styles = theme => ({
   },
   articleLink:{
     textDecoration:"none",
-    color:"#A61D55",
+    // color:"#A61D55",
+    color: "#FA7268",
   },
   carouselStyle:{
    height:220,
