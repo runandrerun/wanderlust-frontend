@@ -48,7 +48,7 @@ export const PrevArrow = (props) => {
 
 export const styles = theme => ({
   media: {
-    height: 190,
+    height: 200,
     objectFit: "cover",
     borderRadius: 5,
     opacity: 0.9,

@@ -13,13 +13,13 @@ export const styles = theme => ({
   },
   year:{
     backgroundColor:"#A61D55",
-    borderRadius:"3.2px", // This is the border radius Airbnb uses for their little PLUS chips
+    borderRadius:"3.2px",
     color:"white",
-    padding:"0 4px" // Same padding that AirBnb uses
+    padding:"0 4px"
   },
   yearArea:{
     textTransform:"uppercase",
-    color:"#A61D55", // matching the Airbnb purple
+    color:"#A61D55",
     fontWeight: 600,
     fontSize:12,
     lineHeight:"16px",
@@ -27,14 +27,14 @@ export const styles = theme => ({
 
   },
   launchicon: {
-    fontSize:12, // I put a little icon next to the original article link
+    fontSize:12,
   },
   articleLink:{
     textDecoration:"none",
     color:"#A61D55",
   },
   carouselStyle:{
-   height:210,
+   height:220,
    objectFit: 'cover',
    borderRadius: 5,
  },

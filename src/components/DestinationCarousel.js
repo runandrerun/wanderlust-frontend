@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CardMedia from "@material-ui/core/CardMedia";
 import Slider from "react-slick";
-import { NextArrow, PrevArrow, styles} from "../themes/carouselStyling.js";
+import { NextArrow, PrevArrow, styles } from "../themes/carouselStyling.js";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { withStyles } from "@material-ui/core/styles";
@@ -18,6 +18,11 @@ class DestinationCarousel extends Component {
       slidesToScroll: 1,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
+      appendDots: dots => (
+        <div style={{bottom: 10}}>
+          <ul style={{ margin: "0px", padding: 0 }}> {dots} </ul>
+        </div>
+      ),
     };
     console.log("Inside Carousel", this.props)
     return (
