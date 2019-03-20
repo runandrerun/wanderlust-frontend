@@ -1,10 +1,9 @@
 export const styles = theme => ({
   header: {
     height: "65px",
-    color: "#FA7268",
-    // color: "#f44336",
-    // backgroundColor: "white",
-    backgroundColor: "#FA7268",
+    // color: "#FA7268",
+    color: "#f44336",
+    backgroundColor: "white",
     boxShadow: "none",
     borderBottom: "1px solid #e2e2e2",
     marginTop: 80
