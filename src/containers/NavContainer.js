@@ -12,6 +12,7 @@ import Button from "@material-ui/core/Button";
 import Filter from "../components/Filter.js";
 import { styles } from '../themes/headerStyling.js';
 
+
 class NavContainer extends Component {
   render() {
     const { classes } = this.props;
@@ -21,7 +22,8 @@ class NavContainer extends Component {
           <Toolbar className={classes.toolbar}>
             <Grid justify="space-between" container spacing={24}>
               <Grid item className={classes.grid}>
-                <Explore className={classes.mainIcon} />
+                    <img src="https://res.cloudinary.com/dx34xrygi/image/upload/v1553129879/travel.png" height="50" width="50" alt="Wanderlust" />
+                {/* <Explore className={classes.mainIcon} /> */}
                 <div className={classes.search}>
                   <div className={classes.searchIcon}>
                     <SearchIcon className={classes.magnifyingGlass} />
