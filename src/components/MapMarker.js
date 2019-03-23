@@ -1,22 +1,27 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Tooltip from "@material-ui/core/Tooltip";
+import Place from "@material-ui/icons/Place";
+import { withStyles } from "@material-ui/core/styles";
+import { styles} from "../themes/markerStyling.js";
 
-class MapMarker extends React.Component {
+class MapMarker extends Component {
   render() {
     const {
       classes,
       pageid,
-      hoveredCardId
+      hoveredCardId,
     } = this.props;
 
     return (
       <div
-        className={classes.markerParent}
+        className={this.props.classes.markerParent}
       >
         <span
           className={classNames(
-            classes.tooltips_span,
+            this.props.classes.tooltips_span,
             pageid == hoveredCardId &&
-              classes.niftyHoverBackground
+              this.props.classes.niftyHoverBackground
           )}
         >
           {this.props.name}
@@ -25,3 +30,9 @@ class MapMarker extends React.Component {
     );
   }
 }
+
+MapMarker.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(MapMarker);

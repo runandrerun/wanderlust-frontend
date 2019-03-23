@@ -15,17 +15,17 @@ class DestinationCard extends Component {
   render() {
     const { classes } = styles;
     console.log("Card", this.props)
+    const setCardMarkerHover = location => {
+      this.setState({
+        hoveredCardId: location.pageid
+      });
+    };
     return (
     <Card className={this.props.classes.card}>
       <CardActionArea>
       <div className={this.props.classes.carouselStyle}>
         <DestinationCarousel destination={this.props.destination} />
       </div>
-        {/*<CardMedia
-          component="img"
-          className={this.props.classes.media}
-          image={this.props.destination.image1}
-        />*/}
         <CardContent className={this.props.classes.cardContentArea}>
 
           <Typography noWrap className={this.props.classes.yearArea} component="p">

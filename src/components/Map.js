@@ -1,5 +1,20 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import GoogleMapReact from "google-map-react";
+import MapMarker from "./MapMarker.js";
+import { withStyles } from "@material-ui/core/styles";
+
+return {
+  fullscreenControl: false,
+  mapTypeControl: false,
+  panControl: false,
+  streetViewControl: false,
+  zoomControl: "true",
+  gestureHandling: "greedy"
+};
+};
+
+const styles = theme => ({});
 
 class Map extends Component {
   static defaultProps = {
@@ -61,4 +76,8 @@ class Map extends Component {
   }
 }
 
-export default Map;
+MapAndMarkers.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(Map);

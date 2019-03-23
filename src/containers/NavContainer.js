@@ -22,7 +22,7 @@ class NavContainer extends Component {
           <Toolbar className={classes.toolbar}>
             <Grid justify="space-between" container spacing={24}>
               <Grid item className={classes.grid}>
-                    <img src="https://res.cloudinary.com/dx34xrygi/image/upload/v1553129879/travel.png" height="50" width="50" alt="Wanderlust" />
+                    <img className={classes.mainIcon} src="https://res.cloudinary.com/dx34xrygi/image/upload/v1553129879/travel.png" height="50" width="50" alt="Wanderlust" />
                 {/* <Explore className={classes.mainIcon} /> */}
                 <div className={classes.search}>
                   <div className={classes.searchIcon}>
