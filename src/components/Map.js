@@ -4,15 +4,17 @@ import GoogleMapReact from "google-map-react";
 import MapMarker from "./MapMarker.js";
 import { withStyles } from "@material-ui/core/styles";
 
-return {
-  fullscreenControl: false,
-  mapTypeControl: false,
-  panControl: false,
-  streetViewControl: false,
-  zoomControl: "true",
-  gestureHandling: "greedy"
+const createMapOptions = () => {
+  return {
+    fullscreenControl: false,
+    mapTypeControl: false,
+    panControl: false,
+    streetViewControl: false,
+    zoomControl: "true",
+    gestureHandling: "greedy"
+  };
 };
-};
+
 
 const styles = theme => ({});
 
@@ -27,21 +29,21 @@ class Map extends Component {
   render() {
     const {
       classes,
-      locations,
+      destinations,
       hoveredCardId,
       pageid
     } = this.props;
-    let MapMarkers = locations.map(
-      (location, index) => {
+    let MapMarkers = destinations.map(
+      (destination, index) => {
         return (
           <MapMarker
-            key={location.id}
-            lat={location.lat}
-            lng={location.lng}
+            key={destination.id}
+            lat={destination.lat}
+            lng={destination.lng}
             name={
-              location.location_name
+              destination.destination_name
             }
-            pageid={location.pageid}
+            pageid={destination.pageid}
             hoveredCardId={
               hoveredCardId
             }
@@ -76,7 +78,7 @@ class Map extends Component {
   }
 }
 
-MapAndMarkers.propTypes = {
+Map.propTypes = {
   classes: PropTypes.object.isRequired
 };
 

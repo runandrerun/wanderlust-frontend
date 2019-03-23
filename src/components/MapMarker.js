@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Tooltip from "@material-ui/core/Tooltip";
 import Place from "@material-ui/icons/Place";
+import classNames from 'classnames';
 import { withStyles } from "@material-ui/core/styles";
-import { styles} from "../themes/markerStyling.js";
+import { styles } from "../themes/markerStyling.js";
 
 class MapMarker extends Component {
   render() {
@@ -11,6 +12,7 @@ class MapMarker extends Component {
       classes,
       pageid,
       hoveredCardId,
+      styles
     } = this.props;
 
     return (
@@ -20,7 +22,7 @@ class MapMarker extends Component {
         <span
           className={classNames(
             this.props.classes.tooltips_span,
-            pageid == hoveredCardId &&
+            this.props.pageid == this.props.hoveredCardId &&
               this.props.classes.niftyHoverBackground
           )}
         >
