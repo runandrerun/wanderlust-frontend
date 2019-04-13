@@ -1,3 +1,9 @@
+import React from "react";
+import Pagination from "react-paginating";
+import NavigateBefore from "@material-ui/icons/NavigateBefore";
+import NavigateNext from "@material-ui/icons/NavigateNext";
+import Typography from "@material-ui/core/Typography";
+
 const PaginationComponent = ({
   total,
   resultsPerPage,
@@ -44,9 +50,9 @@ const PaginationComponent = ({
             {hasPreviousPage && (
               <NavigateBefore
                 style={{
-                  border: "1px solid #008489 ",
+                  border: "1px solid #ff8e8c ",
                   borderRadius: "50%",
-                  color: "#008489"
+                  color: "#ff8e8c"
                 }}
                 {...getPageItemProps({
                   pageValue: previousPage,
@@ -57,19 +63,19 @@ const PaginationComponent = ({
               </NavigateBefore>
             )}
             {pages.map(page => {
-              let activePage = { color: "#008489", cursor: "pointer" };
+              let activePage = { color: "#ff8e8c", cursor: "pointer" };
               if (currentPage === page) {
                 activePage = {
-                  border: "1px solid #008489 ",
+                  border: "1px solid #ff8e8c ",
                   borderRadius: "50%",
-                  color: "#008489",
+                  color: "#ff8e8c",
                   borderRadius: "50%",
                   width: "25px",
                   height: "25px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  backgroundColor: "#008489",
+                  backgroundColor: "#ff8e8c",
                   color: "white"
                 };
               }
@@ -99,9 +105,9 @@ const PaginationComponent = ({
               let activePage = null;
               if (currentPage === page) {
                 activePage = {
-                  border: "1px solid #008489 ",
+                  border: "1px solid #ff8e8c ",
                   borderRadius: "50%",
-                  color: "#008489",
+                  color: "#ff8e8c",
                   cursor: "pointer"
                 };
               }
@@ -113,7 +119,7 @@ const PaginationComponent = ({
                     key={page}
                     style={activePage}
                     style={{
-                      color: "#008489",
+                      color: "#ff8e8c",
                       cursor: "pointer"
                     }}
                     {...getPageItemProps({
@@ -133,9 +139,9 @@ const PaginationComponent = ({
                   onPageChange: handlePageChange
                 })}
                 style={{
-                  border: "1px solid #008489 ",
+                  border: "1px solid #ff8e8c ",
                   borderRadius: "50%",
-                  color: "#008489",
+                  color: "#ff8e8c",
                   cursor: "pointer"
                 }}
               >
@@ -146,7 +152,7 @@ const PaginationComponent = ({
 
           <div>
             <Typography variant="caption" gutterBottom>
-              {offset} - {offset + resultsPerPage} of {total} Locations
+              {offset} - {offset + resultsPerPage} of {total} destinations
             </Typography>
           </div>
         </div>
@@ -156,4 +162,3 @@ const PaginationComponent = ({
 };
 
 export default PaginationComponent;
- 

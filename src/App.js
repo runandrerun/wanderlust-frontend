@@ -5,6 +5,7 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import Filter from './components/Filter.js';
 import Map from './components/Map.js';
 import DestinationsVirtualizedContainer from './containers/DestinationsVirtualizedContainer.js';
+import PaginationComponent from './components/PaginationComponent.js';
 // import DestinationsWindow from './containers/DestinationsWindow.js';
 // import DestinationsContainer from './containers/DestinationsContainer.js';
 import './App.css';
@@ -29,6 +30,7 @@ class App extends Component {
         {/* <Map destinations={parseData} /> */}
         {/*<DestinationsWindow destinations={parseData} /> */}
         <DestinationsVirtualizedContainer destinations={parseData} />
+        <PaginationComponent />
         {/* <DestinationsContainer destinations={parseData} /> */}
         </MuiThemeProvider>
       </div>
