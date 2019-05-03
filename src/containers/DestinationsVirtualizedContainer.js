@@ -47,7 +47,7 @@ class DestinationsGrid extends PureComponent {
     const { destinations, classes } = this.props;
 
     return (
-      <div style={{ marginTop: "10px", height: "80vh" }}>
+      <div style={{ marginTop: "200px", height: "80vh" }}>
         <AutoSizer>
           {({ height, width }) => {
             const itemsPerRow = Math.floor(width / CARD_SIZE) || 1;
