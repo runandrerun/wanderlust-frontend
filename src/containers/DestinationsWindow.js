@@ -6,7 +6,7 @@ import { styles } from "../themes/destinationsContainerStyling.js";
 import { withStyles } from "@material-ui/core/styles";
 import "../themes/centerContainer.css";
 import Grid from "@material-ui/core/Grid";
-import LocationCard from "../components/DestinationCard.js";
+import DestinationCard from "../components/DestinationCard.js";
 
 const CARD_SIZE = 340;
 
@@ -21,7 +21,7 @@ class Row extends Component {
       destination,
       index,
     ) => {
-      allDestinations.push(<LocationCard key={index} destination={dictionary[index]} />)
+      allDestinations.push(<DestinationCard key={index} destination={dictionary[index]} />)
       });
     };
     return (
@@ -38,7 +38,7 @@ class Row extends Component {
 class DestinationsWindow extends Component {
   render() {
     const listLength = this.props.destinations.length;
-
+    console.log(this.props.destinations)
     return (
     <AutoSizer>
       {({ height, width }) => (

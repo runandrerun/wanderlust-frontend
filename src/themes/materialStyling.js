@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 export const theme = createMuiTheme({
   typography: {
     fontFamily: "'Montserrat', sans-serif",
-    fontSize:14,
+    fontSize: 14,
     textTransform: "none",
     color: "#484848",
     useNextVariants: true,

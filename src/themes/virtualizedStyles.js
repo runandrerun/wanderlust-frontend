@@ -1,7 +1,7 @@
 export const styles = theme => ({
   root: {
     padding: "0 85px",
-    marginTop: 20,
+    marginTop: 40,
     justifyContent: "flex-start"
   },
   Row: {
