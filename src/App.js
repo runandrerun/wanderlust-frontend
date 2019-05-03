@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider theme={theme}>
         <NavContainer />
-        <Filter />
+        {/* <Filter /> */}
         {/* <Map destinations={parseData} /> */}
         {/* <DestinationsWindow destinations={parseData} /> */}
         <DestinationsVirtualizedContainer destinations={parseData} />

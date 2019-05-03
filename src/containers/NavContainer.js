@@ -37,7 +37,7 @@ class NavContainer extends Component {
                   />
                 </div>
               </Grid>
-              <Grid item className={classes.grid}>
+              {/*<Grid item className={classes.grid}>
                 <div>
                   <Button className={classes.menubuttons} color="inherit">
                     Help
@@ -49,7 +49,7 @@ class NavContainer extends Component {
                     Log in
                   </Button>
                 </div>
-              </Grid>
+              </Grid>*/}
             </Grid>
           </Toolbar>
         </AppBar>
